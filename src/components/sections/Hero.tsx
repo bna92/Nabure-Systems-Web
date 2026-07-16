@@ -1,73 +1,75 @@
-import Container from "@/components/ui/Container";
+import { Link } from "react-router-dom";
 import Button from "@/components/ui/Button";
 import Icon from "@/components/ui/Icon";
+import HeroAnimation from "@/components/sections/HeroAnimation";
 
-const trustBadges = ["Cotización gratuita", "Respuesta en 24h", "Soporte en español"];
+const serviceIcons: { icon: string; label: string }[] = [
+  { icon: "code", label: "Sistemas a la medida" },
+  { icon: "language", label: "Sitios web" },
+  { icon: "point_of_sale", label: "Puntos de venta" },
+  { icon: "chat", label: "WhatsApp" },
+];
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#0F6FFF] via-[#2f8dff] to-[#22d3ff]">
-      {/* Floating decorative shapes */}
-      <Icon
-        name="send"
-        className="pointer-events-none absolute left-[8%] top-16 hidden rotate-[18deg] text-4xl text-white/25 md:block"
-      />
-      <Icon
-        name="bolt"
-        className="pointer-events-none absolute right-[12%] top-24 hidden text-3xl text-white/25 lg:block"
-      />
-      <span className="pointer-events-none absolute left-[18%] top-40 hidden size-3 rounded-full bg-white/40 md:block" />
-      <span className="pointer-events-none absolute right-[20%] top-16 hidden size-4 rounded-full bg-white/30 lg:block" />
-      <Icon
-        name="stars"
-        className="pointer-events-none absolute right-[6%] bottom-24 hidden text-3xl text-white/25 md:block"
-      />
+    <section className="relative z-10 flex w-full flex-col items-center justify-center pb-16 pt-4 md:pb-20">
+      <h1 className="sr-only">Nabure Systems — software a la medida de tu negocio</h1>
 
-      <Container className="relative flex flex-col items-center py-xl text-center">
-        <h1 className="mt-md max-w-3xl text-display-xl text-white">
-          Construimos el sistema que tu negocio necesita
-        </h1>
+      <Link
+        to="/servicios"
+        className="card-soft-shadow absolute right-0 top-0 z-20 inline-flex items-center gap-3 rounded-full border border-surface-container-highest bg-white py-1.5 pl-5 pr-1.5 text-label-md font-semibold uppercase tracking-widest text-on-surface-variant transition-all hover:bg-surface-container-low"
+      >
+        Ver servicios
+        <span className="flex size-8 items-center justify-center rounded-full bg-[#111] text-white">
+          <Icon name="north_east" />
+        </span>
+      </Link>
 
-        <p className="mt-md max-w-2xl text-body-lg text-white/85">
-          Sitios web, puntos de venta, automatización de WhatsApp y sistemas
-          administrativos a la medida, sin importar el giro de tu empresa.
+      <HeroAnimation />
+
+      <div className="absolute bottom-33 left-0 z-20 hidden max-w-[280px] text-left md:block">
+        <a
+          href="#servicios"
+          className="group mb-3 inline-flex items-center gap-1 text-body-sm font-semibold uppercase tracking-widest text-on-surface transition-colors hover:text-on-surface-variant"
+        >
+          <Icon
+            name="north_east"
+            className="text-sm transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          />
+          Conoce más
+        </a>
+        <p className="text-body-sm font-medium leading-relaxed text-on-surface-variant">
+          Nabure Systems es el estudio que convierte procesos reales de tu
+          negocio en software a la medida: sitios, puntos de venta y
+          automatizaciones, sin plantillas genéricas.
         </p>
+      </div>
 
-        <div className="mt-lg flex flex-col gap-sm sm:flex-row">
-          <Button as="link" to="/contacto" className="bg-white text-secondary shadow-xl hover:bg-white/90">
+      <div className="absolute bottom-0 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center">
+        <Button as="link" to="/contacto">
+          <span className="inline-flex items-center gap-2">
             Cotiza tu proyecto
-            <Icon name="arrow_forward" />
-          </Button>
-          <Button
-            as="link"
-            to="/servicios"
-            variant="secondary"
-            className="border-white/40 bg-white/10 text-white hover:border-white hover:bg-white/20 hover:text-white"
-          >
-            Ver servicios
-          </Button>
-        </div>
+            <Icon name="dns" className="text-lg" />
+          </span>
+        </Button>
+      </div>
 
-        <div className="mt-lg flex flex-wrap items-center justify-center gap-sm">
-          {trustBadges.map((badge) => (
-            <span
-              key={badge}
-              className="rounded-full bg-white/15 px-sm py-1 text-body-sm text-white backdrop-blur"
+      <div className="absolute bottom-45 right-0 z-20 hidden flex-col items-end gap-3 md:flex">
+        <span className="text-body-sm font-semibold uppercase tracking-widest text-on-surface-variant">
+          Nuestros servicios
+        </span>
+        <div className="flex -space-x-3">
+          {serviceIcons.map((service) => (
+            <div
+              key={service.label}
+              title={service.label}
+              className="card-soft-shadow flex size-10 items-center justify-center rounded-full border-[3px] border-white bg-surface-container text-on-surface transition-transform hover:z-10 hover:-translate-y-1"
             >
-              {badge}
-            </span>
+              <Icon name={service.icon} className="text-base" />
+            </div>
           ))}
         </div>
-      </Container>
-
-      <svg
-        viewBox="0 0 1440 80"
-        fill="none"
-        className="block w-full text-surface"
-        preserveAspectRatio="none"
-      >
-        <path d="M0 40 C 360 90 1080 -10 1440 40 L1440 80 L0 80 Z" fill="currentColor" />
-      </svg>
+      </div>
     </section>
   );
 }

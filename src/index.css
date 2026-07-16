@@ -3,42 +3,42 @@
 @theme {
   --font-sans: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
 
-  /* Color tokens (Material 3 style, matching the brand mockup) */
+  /* Color tokens — neutral gray/black minimal palette */
   --color-error: #ba1a1a;
   --color-on-error: #ffffff;
   --color-error-container: #ffdad6;
   --color-on-error-container: #93000a;
 
-  --color-surface: #f7f9fb;
-  --color-surface-dim: #d8dadc;
-  --color-surface-bright: #f7f9fb;
+  --color-surface: #f4f4f5;
+  --color-surface-dim: #e4e4e7;
+  --color-surface-bright: #f4f4f5;
   --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #f2f4f6;
-  --color-surface-container: #eceef0;
-  --color-surface-container-high: #e6e8ea;
-  --color-surface-container-highest: #e0e3e5;
-  --color-surface-variant: #e0e3e5;
-  --color-surface-tint: #565e74;
-  --color-on-surface: #191c1e;
-  --color-on-surface-variant: #45464d;
-  --color-on-background: #191c1e;
-  --color-background: #f7f9fb;
+  --color-surface-container-low: #fafafa;
+  --color-surface-container: #f0f0f2;
+  --color-surface-container-high: #e8e8eb;
+  --color-surface-container-highest: #e0e0e4;
+  --color-surface-variant: #e5e5ea;
+  --color-surface-tint: #52525b;
+  --color-on-surface: #111111;
+  --color-on-surface-variant: #7a798a;
+  --color-on-background: #111111;
+  --color-background: #f4f4f5;
 
-  --color-outline: #76777d;
-  --color-outline-variant: #c6c6cd;
+  --color-outline: #9a9aab;
+  --color-outline-variant: #e5e5ea;
 
-  --color-inverse-surface: #2d3133;
-  --color-inverse-on-surface: #eff1f3;
-  --color-inverse-primary: #bec6e0;
+  --color-inverse-surface: #27272a;
+  --color-inverse-on-surface: #f4f4f5;
+  --color-inverse-primary: #d4d4d8;
 
   --color-primary: #000000;
   --color-on-primary: #ffffff;
-  --color-primary-container: #131b2e;
-  --color-on-primary-container: #7c839b;
-  --color-primary-fixed: #dae2fd;
-  --color-primary-fixed-dim: #bec6e0;
-  --color-on-primary-fixed: #131b2e;
-  --color-on-primary-fixed-variant: #3f465c;
+  --color-primary-container: #18181b;
+  --color-on-primary-container: #a1a1aa;
+  --color-primary-fixed: #e4e4e7;
+  --color-primary-fixed-dim: #d4d4d8;
+  --color-on-primary-fixed: #f4f4f5;
+  --color-on-primary-fixed-variant: #d4d4d8;
 
   --color-secondary: #0051d5;
   --color-on-secondary: #ffffff;
@@ -58,7 +58,7 @@
   --color-on-tertiary-fixed: #0b1c30;
   --color-on-tertiary-fixed-variant: #38485d;
 
-  /* Brand accent sampled from the Nabure Systems logo mark */
+  /* Brand accent sampled from the Nabure Systems logo mark — used sparingly now */
   --color-brand-cyan: #22d3ff;
   --color-brand-blue: #0f6fff;
 
@@ -111,7 +111,96 @@
 }
 
 .brand-glow {
-  box-shadow: 0 0 0 1px rgba(34, 211, 255, 0.25), 0 8px 24px -8px rgba(15, 111, 255, 0.45);
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 255, 0.25),
+    0 8px 24px -8px rgba(15, 111, 255, 0.35);
+}
+
+/* Giant hero headline, matches the Nova AI reference sizing */
+.text-giant {
+  font-size: clamp(3rem, 10vw, 11rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.hero-mark-glow {
+  background: radial-gradient(circle, rgba(34, 211, 255, 0.4), transparent 70%);
+  filter: blur(18px);
+  animation: hero-glow-pulse 3.6s ease-in-out infinite;
+}
+
+@keyframes hero-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.94);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-mark-glow {
+    animation: none;
+  }
+}
+
+/* Soft layered card shadow used on the outer app shell */
+.shell-shadow {
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.card-soft-shadow {
+  box-shadow:
+    0px 2px 3px -1px rgba(0, 0, 0, 0.1),
+    0px 1px 0px 0px rgba(25, 28, 33, 0.02),
+    0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}
+
+.card-soft-shadow-hover:hover {
+  box-shadow:
+    0px 0px 0px 1px rgba(0, 0, 0, 0.06),
+    0px 1px 1px -0.5px rgba(0, 0, 0, 0.06),
+    0px 3px 3px -1.5px rgba(0, 0, 0, 0.06),
+    0px 6px 6px -3px rgba(0, 0, 0, 0.06),
+    0px 12px 12px -6px rgba(0, 0, 0, 0.06),
+    0px 24px 24px -12px rgba(0, 0, 0, 0.06);
+}
+
+/* Skeuomorphic / glossy pill button */
+.btn-glossy {
+  box-shadow:
+    0 8px 16px -4px rgba(0, 0, 0, 0.2),
+    0 2px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-glossy:active {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn-glossy-inner {
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 1),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.btn-glossy:active .btn-glossy-inner {
+  box-shadow:
+    inset 0 3px 6px rgba(0, 0, 0, 0.15),
+    inset 0 -1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.btn-texture {
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 3px 3px;
 }
 
 .reveal {

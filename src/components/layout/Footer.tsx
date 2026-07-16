@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import Container from "@/components/ui/Container";
 import Icon from "@/components/ui/Icon";
-import logoMark from "@/assets/brand/mark-badge-small.png";
+import logoMark from "@/assets/brand/logo-mark-inline.png";
 
 const serviceLinks = [
   { label: "Sistemas a la medida", to: "/servicios" },
   { label: "Sitios web", to: "/servicios" },
   { label: "Puntos de venta", to: "/servicios" },
   { label: "Automatización de WhatsApp", to: "/servicios" },
-  { label: "Planes y precios", to: "/precios" },
+  { label: "Planes y precios", to: "/servicios#precios" },
 ];
 
 const legalLinks = [
@@ -24,8 +24,8 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-lg px-md py-xl md:grid-cols-4 md:px-xl">
         <div className="space-y-sm">
           <div className="flex items-center gap-3">
-            <img src={logoMark} alt="Nabure Systems" className="size-9 rounded-xl" />
-            <p className="text-headline-sm font-bold text-on-primary">Nabure Systems</p>
+            <img src={logoMark} alt="Nabure Systems" className="h-8 w-auto" />
+            <p className="text-headline-sm font-bold whitespace-nowrap text-on-primary">Nabure Systems</p>
           </div>
           <p className="text-body-sm leading-relaxed text-on-primary-container">
             Ingeniería de software a la medida para empresas que buscan
@@ -73,10 +73,10 @@ export default function Footer() {
           </p>
           <div className="flex flex-col gap-base">
             <p className="text-body-sm text-on-primary-container">
-              contacto@naburesystems.com
+              bryanamezcua@gmail.com
             </p>
             <p className="text-body-sm text-on-primary-container">
-              +52 000 000 0000
+              +52 6671505736
             </p>
           </div>
           <div className="flex gap-sm pt-sm">

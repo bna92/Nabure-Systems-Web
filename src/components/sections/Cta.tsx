@@ -6,9 +6,9 @@ export default function Cta() {
   return (
     <section className="py-xl">
       <Container>
-        <div className="relative flex flex-col items-center gap-md overflow-hidden rounded-3xl border border-outline-variant bg-primary-container px-md py-xl text-center">
+        <div className="shell-shadow relative flex flex-col items-center gap-md overflow-hidden rounded-[2.5rem] bg-primary-container px-md py-xl text-center">
           <div
-            className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_20%_0%,_rgba(34,211,255,0.18),_transparent_50%)]"
+            className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(circle_at_20%_0%,_rgba(255,255,255,0.08),_transparent_50%)]"
             aria-hidden="true"
           />
           <h2 className="max-w-[36rem] text-headline-md text-on-primary">
@@ -20,7 +20,7 @@ export default function Cta() {
           </p>
           <Button as="link" to="/contacto">
             Cotiza tu proyecto
-            <Icon name="arrow_forward" />
+            <Icon name="arrow_forward" className="ml-2" />
           </Button>
         </div>
       </Container>

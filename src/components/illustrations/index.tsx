@@ -2,12 +2,12 @@ interface IllustrationProps {
   className?: string;
 }
 
-const NAVY = "#131b2e";
-const MUTED_NAVY = "#3f465c";
-const CYAN = "#22d3ff";
-const BLUE = "#0f6fff";
-const LIGHT_BLUE = "#b4c5ff";
-const TINT = "#e8f9ff";
+const NAVY = "#18181b";
+const MUTED_NAVY = "#52525b";
+const CYAN = "#a1a1aa";
+const BLUE = "#3f3f46";
+const LIGHT_BLUE = "#d4d4d8";
+const TINT = "#f4f4f5";
 
 export function CustomSoftwareIllustration({ className = "" }: IllustrationProps) {
   return (

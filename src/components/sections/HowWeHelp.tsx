@@ -1,4 +1,3 @@
-import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 import { Link } from "react-router-dom";
@@ -31,7 +30,7 @@ const rows = [
     title: "Vende y controla tu inventario en un solo lugar",
     description:
       "Un punto de venta pensado para tu negocio, con reportes claros y la opción de contratarlo como suscripción mensual.",
-    link: "/precios",
+    link: "/servicios#precios",
     Illustration: PosIllustration,
   },
   {
@@ -46,38 +45,36 @@ const rows = [
 
 export default function HowWeHelp() {
   return (
-    <section className="py-xl">
-      <Container className="flex flex-col gap-xl">
-        <SectionHeading
-          eyebrow="Cómo te ayudamos"
-          title="Cada paso hacia tu solución ideal"
-          description="La creación de tu sistema es solo el comienzo: te acompañamos en todo el camino."
-        />
+    <div className="flex flex-col gap-xl">
+      <SectionHeading
+        eyebrow="Cómo te ayudamos"
+        title="Cada paso hacia tu solución ideal"
+        description="La creación de tu sistema es solo el comienzo: te acompañamos en todo el camino."
+      />
 
-        <div className="flex flex-col gap-xl">
-          {rows.map((row, index) => (
-            <Reveal key={row.id} delayMs={100}>
-              <div
-                className={`grid items-center gap-lg lg:grid-cols-2 ${
-                  index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
-                }`}
-              >
-                <row.Illustration className="mx-auto w-full max-w-[22rem]" />
-                <div className="flex flex-col gap-sm">
-                  <h3 className="text-headline-sm text-on-surface">{row.title}</h3>
-                  <p className="text-body-md text-on-surface-variant">{row.description}</p>
-                  <Link
-                    to={row.link}
-                    className="mt-1 inline-flex w-fit items-center gap-1 text-body-sm font-semibold text-secondary hover:underline"
-                  >
-                    Conoce más →
-                  </Link>
-                </div>
+      <div className="flex flex-col gap-xl">
+        {rows.map((row, index) => (
+          <Reveal key={row.id} delayMs={100}>
+            <div
+              className={`grid grid-cols-1 items-center gap-lg lg:grid-cols-2 ${
+                index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
+              }`}
+            >
+              <row.Illustration className="mx-auto w-full max-w-[22rem]" />
+              <div className="flex flex-col gap-sm">
+                <h3 className="text-headline-sm text-on-surface">{row.title}</h3>
+                <p className="text-body-md text-on-surface-variant">{row.description}</p>
+                <Link
+                  to={row.link}
+                  className="mt-1 inline-flex w-fit items-center gap-1 text-body-sm font-semibold text-on-surface hover:underline"
+                >
+                  Conoce más →
+                </Link>
               </div>
-            </Reveal>
-          ))}
-        </div>
-      </Container>
-    </section>
+            </div>
+          </Reveal>
+        ))}
+      </div>
+    </div>
   );
 }

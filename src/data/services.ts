@@ -109,7 +109,6 @@ export const processSteps: ProcessStep[] = [
 export const navLinks: NavLink[] = [
   { label: "Inicio", to: "/" },
   { label: "Servicios", to: "/servicios" },
-  { label: "Precios", to: "/precios" },
   { label: "Portafolio", to: "/portafolio" },
   { label: "Contacto", to: "/contacto" },
 ];

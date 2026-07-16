@@ -17,7 +17,7 @@ export default function SectionHeading({
   return (
     <div className={`flex max-w-2xl flex-col gap-sm ${alignment}`}>
       {eyebrow && (
-        <span className="text-label-md font-bold uppercase tracking-widest text-secondary">
+        <span className="text-label-md font-bold uppercase tracking-widest text-on-surface-variant">
           {eyebrow}
         </span>
       )}

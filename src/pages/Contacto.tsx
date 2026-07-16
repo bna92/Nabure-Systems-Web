@@ -1,6 +1,8 @@
 import { useState, type FormEvent } from "react";
-import Container from "@/components/ui/Container";
 import Icon from "@/components/ui/Icon";
+import Card from "@/components/ui/Card";
+import Panel from "@/components/ui/Panel";
+import Button from "@/components/ui/Button";
 
 const projectTypes = [
   "Software a medida",
@@ -21,12 +23,12 @@ export default function Contacto() {
   }
 
   return (
-    <Container className="py-xl">
+    <Panel>
       <div className="grid grid-cols-1 gap-xl lg:grid-cols-12">
         {/* Columna izquierda: contenido y detalles */}
         <div className="flex flex-col gap-lg lg:col-span-5">
           <div className="space-y-sm">
-            <span className="text-label-md font-bold uppercase tracking-widest text-secondary">
+            <span className="text-label-md font-bold uppercase tracking-widest text-on-surface-variant">
               Hablemos de su proyecto
             </span>
             <h1 className="text-display-lg text-on-surface">
@@ -39,50 +41,52 @@ export default function Contacto() {
             </p>
           </div>
 
-          <div className="space-y-md rounded-3xl border border-outline-variant bg-surface-container-lowest p-md">
-            <div className="flex items-start gap-sm">
-              <div className="rounded-xl bg-secondary-container p-xs text-white">
-                <Icon name="mail" />
+          <Card innerBg="bg-surface-container-low">
+            <div className="space-y-md p-md">
+              <div className="flex items-start gap-sm">
+                <div className="rounded-xl bg-white p-xs text-on-surface card-soft-shadow">
+                  <Icon name="mail" />
+                </div>
+                <div>
+                  <p className="text-title-lg text-on-surface">Correo electrónico</p>
+                  <p className="text-body-md text-on-surface-variant">
+                    bryanamezcua@gmail.com
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="text-title-lg text-on-surface">Correo electrónico</p>
-                <p className="text-body-md text-on-surface-variant">
-                  contacto@naburesystems.com
-                </p>
-              </div>
-            </div>
 
-            <div className="flex items-start gap-sm">
-              <div className="rounded-xl bg-secondary-container p-xs text-white">
-                <Icon name="location_on" />
+              <div className="flex items-start gap-sm">
+                <div className="rounded-xl bg-white p-xs text-on-surface card-soft-shadow">
+                  <Icon name="location_on" />
+                </div>
+                <div>
+                  <p className="text-title-lg text-on-surface">Ubicación</p>
+                  <p className="text-body-md text-on-surface-variant">México</p>
+                  <p className="text-body-md text-on-surface-variant">
+                    Atención remota a todo el país y ubicados en Culiacán, Sinaloa.
+                  </p>
+                </div>
               </div>
-              <div>
-                <p className="text-title-lg text-on-surface">Ubicación</p>
-                <p className="text-body-md text-on-surface-variant">México</p>
-                <p className="text-body-md text-on-surface-variant">
-                  Atención remota a todo el país
-                </p>
-              </div>
-            </div>
 
-            <div className="flex items-start gap-sm">
-              <div className="rounded-xl bg-secondary-container p-xs text-white">
-                <Icon name="schedule" />
-              </div>
-              <div>
-                <p className="text-title-lg text-on-surface">Horario de atención</p>
-                <p className="text-body-md text-on-surface-variant">
-                  Lunes a viernes: 09:00 - 18:00
-                </p>
+              <div className="flex items-start gap-sm">
+                <div className="rounded-xl bg-white p-xs text-on-surface card-soft-shadow">
+                  <Icon name="schedule" />
+                </div>
+                <div>
+                  <p className="text-title-lg text-on-surface">Horario de atención</p>
+                  <p className="text-body-md text-on-surface-variant">
+                    Lunes a viernes: 09:00 - 18:00
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+          </Card>
         </div>
 
         {/* Columna derecha: formulario */}
         <div className="lg:col-span-7">
-          <div className="rounded-3xl border border-outline-variant bg-white p-md shadow-sm md:p-lg">
-            <form onSubmit={handleSubmit} className="space-y-md">
+          <Card>
+            <form onSubmit={handleSubmit} className="space-y-md p-md md:p-lg">
               <div className="grid grid-cols-1 gap-md md:grid-cols-2">
                 <div className="flex flex-col gap-base">
                   <label
@@ -97,7 +101,7 @@ export default function Contacto() {
                     type="text"
                     required
                     placeholder="Ej. Juan Pérez"
-                    className="rounded-xl border border-outline-variant p-sm outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                    className="rounded-xl border border-outline-variant p-sm outline-none transition-all focus:border-on-surface focus:ring-2 focus:ring-on-surface/10"
                   />
                 </div>
                 <div className="flex flex-col gap-base">
@@ -113,7 +117,7 @@ export default function Contacto() {
                     type="email"
                     required
                     placeholder="juan@empresa.com"
-                    className="rounded-xl border border-outline-variant p-sm outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                    className="rounded-xl border border-outline-variant p-sm outline-none transition-all focus:border-on-surface focus:ring-2 focus:ring-on-surface/10"
                   />
                 </div>
               </div>
@@ -130,7 +134,7 @@ export default function Contacto() {
                     id="projectType"
                     name="projectType"
                     defaultValue={projectTypes[0]}
-                    className="appearance-none rounded-xl border border-outline-variant bg-surface-container-lowest p-sm outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                    className="appearance-none rounded-xl border border-outline-variant bg-surface-container-lowest p-sm outline-none transition-all focus:border-on-surface focus:ring-2 focus:ring-on-surface/10"
                   >
                     {projectTypes.map((type) => (
                       <option key={type}>{type}</option>
@@ -149,7 +153,7 @@ export default function Contacto() {
                     name="company"
                     type="text"
                     placeholder="Nombre de tu empresa"
-                    className="rounded-xl border border-outline-variant p-sm outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                    className="rounded-xl border border-outline-variant p-sm outline-none transition-all focus:border-on-surface focus:ring-2 focus:ring-on-surface/10"
                   />
                 </div>
               </div>
@@ -167,7 +171,7 @@ export default function Contacto() {
                   required
                   rows={4}
                   placeholder="Describe brevemente lo que necesitas resolver..."
-                  className="resize-none rounded-xl border border-outline-variant p-sm outline-none transition-all focus:border-secondary focus:ring-2 focus:ring-secondary/20"
+                  className="resize-none rounded-xl border border-outline-variant p-sm outline-none transition-all focus:border-on-surface focus:ring-2 focus:ring-on-surface/10"
                 />
               </div>
 
@@ -176,30 +180,29 @@ export default function Contacto() {
                   id="privacy"
                   type="checkbox"
                   required
-                  className="size-4 rounded-md border-outline-variant text-secondary focus:ring-secondary"
+                  className="size-4 rounded-md border-outline-variant text-on-surface focus:ring-on-surface"
                 />
                 <label htmlFor="privacy" className="text-body-sm text-on-surface-variant">
                   Acepto el tratamiento de mis datos para fines de contacto.
                 </label>
               </div>
 
-              <button
-                type="submit"
-                className="flex w-full items-center justify-center gap-sm rounded-full bg-secondary py-md text-body-md font-bold text-white shadow-lg shadow-secondary/20 transition-all hover:bg-on-secondary-fixed-variant active:scale-[0.98]"
-              >
-                Enviar solicitud
-                <Icon name="arrow_forward" />
-              </button>
+              <Button type="submit" className="w-full">
+                <span className="inline-flex items-center gap-2">
+                  Enviar solicitud
+                  <Icon name="arrow_forward" className="text-lg" />
+                </span>
+              </Button>
 
               {submitted && (
-                <p className="text-body-sm text-secondary">
+                <p className="text-body-sm font-semibold text-on-surface">
                   ¡Gracias! Te contactaremos pronto.
                 </p>
               )}
             </form>
-          </div>
+          </Card>
         </div>
       </div>
-    </Container>
+    </Panel>
   );
 }
