@@ -31,10 +31,24 @@ export default function Services() {
                 </span>
               )}
               <div className="flex h-full flex-col gap-sm p-lg">
-                <div className="flex size-12 items-center justify-center rounded-2xl bg-surface-container-low text-on-surface">
-                  <Icon name={service.icon} className="text-2xl" />
+                <div className="relative h-40 overflow-hidden rounded-2xl bg-surface-container-low">
+                  <video
+                    src={`/videos/services/${service.id}.mp4`}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    aria-hidden="true"
+                    className="h-full w-full object-cover object-top"
+                  />
                 </div>
-                <h3 className="text-title-lg text-on-surface">{service.title}</h3>
+                <h3 className="flex items-center justify-between gap-2 text-title-lg text-on-surface">
+                  {service.title}
+                  <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-surface-container-low text-on-surface">
+                    <Icon name={service.icon} className="text-base" />
+                  </span>
+                </h3>
                 <p className="text-body-sm text-on-surface-variant">{service.description}</p>
                 <ul className="mt-2 flex flex-col gap-2">
                   {service.features.map((feature) => (

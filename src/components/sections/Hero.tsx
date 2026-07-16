@@ -17,11 +17,11 @@ export default function Hero() {
 
       <Link
         to="/servicios"
-        className="card-soft-shadow absolute right-0 top-0 z-20 inline-flex items-center gap-3 rounded-full border border-surface-container-highest bg-white py-1.5 pl-5 pr-1.5 text-label-md font-semibold uppercase tracking-widest text-on-surface-variant transition-all hover:bg-surface-container-low"
+        className="card-soft-shadow absolute right-0 top-0 z-20 inline-flex items-center gap-1.5 rounded-full border border-surface-container-highest bg-white py-1 pl-1 pr-1.5 text-[8px] font-semibold uppercase tracking-wide text-on-surface-variant transition-all hover:bg-surface-container-low sm:gap-3 sm:py-1.5 sm:pl-5 sm:pr-1.5 sm:text-label-md sm:tracking-widest"
       >
         Ver servicios
-        <span className="flex size-8 items-center justify-center rounded-full bg-[#111] text-white">
-          <Icon name="north_east" />
+        <span className="flex size-6 items-center justify-center rounded-full bg-[#111] text-white sm:size-8">
+          <Icon name="north_east" className="text-sm sm:text-base" />
         </span>
       </Link>
 
