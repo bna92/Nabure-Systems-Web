@@ -29,7 +29,7 @@ export default function Hero() {
 
       <div className="absolute bottom-33 left-0 z-20 hidden max-w-[280px] text-left md:block">
         <a
-          href="#servicios"
+          href="#nosotros"
           className="group mb-3 inline-flex items-center gap-1 text-body-sm font-semibold uppercase tracking-widest text-on-surface transition-colors hover:text-on-surface-variant"
         >
           <Icon
@@ -54,22 +54,6 @@ export default function Hero() {
         </Button>
       </div>
 
-      <div className="absolute bottom-45 right-0 z-20 hidden flex-col items-end gap-3 md:flex">
-        <span className="text-body-sm font-semibold uppercase tracking-widest text-on-surface-variant">
-          Nuestros servicios
-        </span>
-        <div className="flex -space-x-3">
-          {serviceIcons.map((service) => (
-            <div
-              key={service.label}
-              title={service.label}
-              className="card-soft-shadow flex size-10 items-center justify-center rounded-full border-[3px] border-white bg-surface-container text-on-surface transition-transform hover:z-10 hover:-translate-y-1"
-            >
-              <Icon name={service.icon} className="text-base" />
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   );
 }

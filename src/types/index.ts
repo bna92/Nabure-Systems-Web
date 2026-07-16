@@ -8,7 +8,7 @@ export interface Service {
 
 export interface ProcessStep {
   id: string;
-  number: string;
+  icon: string;
   title: string;
   description: string;
 }

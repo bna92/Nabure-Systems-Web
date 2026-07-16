@@ -3,9 +3,9 @@ import Icon from "@/components/ui/Icon";
 import { CustomSoftwareIllustration } from "@/components/illustrations";
 
 const featureList = [
-  { number: "01/", label: "Desarrollo a la medida" },
-  { number: "02/", label: "Soporte continuo" },
-  { number: "03/", label: "Entrega ágil" },
+  { icon: "tune", label: "Desarrollo a la medida" },
+  { icon: "support_agent", label: "Soporte continuo" },
+  { icon: "bolt", label: "Entrega ágil" },
 ];
 
 export default function Highlights() {
@@ -23,13 +23,13 @@ export default function Highlights() {
           <ul className="mt-auto flex w-full flex-col text-body-sm font-medium text-on-surface">
             {featureList.map((item, index) => (
               <li
-                key={item.number}
+                key={item.label}
                 className={`group flex cursor-default items-center gap-3 py-3 ${
                   index < featureList.length - 1 ? "border-b border-surface-container-high" : ""
                 }`}
               >
-                <span className="w-8 shrink-0 text-label-md uppercase tracking-wider text-outline">
-                  {item.number}
+                <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-surface-container-low text-on-surface">
+                  <Icon name={item.icon} className="text-base" />
                 </span>
                 <span className="tracking-tight text-on-surface-variant transition-colors group-hover:text-on-surface">
                   {item.label}
@@ -46,7 +46,7 @@ export default function Highlights() {
         className="group/hl order-1 overflow-hidden md:order-2"
       >
         <div className="relative flex h-full flex-col justify-between p-8 md:p-10">
-          <h3 className="relative z-10 mt-16 pr-4 text-3xl font-medium leading-[1.1] tracking-tighter text-on-surface transition-transform duration-500 ease-out group-hover/hl:translate-x-2 md:mt-24 md:text-4xl lg:text-[2.5rem]">
+          <h3 className="relative z-10 mt-1 pr-2 text-4xl font-medium leading-[1.1] tracking-tighter text-on-surface transition-transform duration-500 ease-out group-hover/hl:translate-x-2 md:mt-4 md:text-5xl lg:text-[3rem]">
             Construimos el sistema más sólido para hacer crecer tu negocio
           </h3>
         </div>

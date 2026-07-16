@@ -3,13 +3,14 @@ import type { Service, ProcessStep, NavLink } from "@/types";
 export const services: Service[] = [
   {
     id: "sistemas-a-medida",
-    title: "Sistemas a la medida",
+    title: "Sistemas Empresariales",
     description:
       "Desarrollamos software personalizado que se adapta a los procesos exactos de tu negocio, sin pagar por funciones que no necesitas.",
     icon: "code",
     features: [
-      "Análisis de procesos y requerimientos",
-      "Arquitectura escalable",
+      "Sistemas administrativos",
+      "Sistemas de facturacion",
+      "Sistemas para RRHH",
       "Integraciones con tus herramientas actuales",
     ],
   },
@@ -20,9 +21,9 @@ export const services: Service[] = [
       "Sitios web rápidos, modernos y optimizados para negocios de cualquier industria: desde landing pages hasta plataformas complejas.",
     icon: "language",
     features: [
-      "Diseño responsivo y a medida",
+      "Diseño responsivo para cualquier dispositivo",
       "Optimización SEO y de rendimiento",
-      "Panel de administración de contenido",
+      "Contenido autoadministrable",
     ],
   },
   {
@@ -77,29 +78,29 @@ export const services: Service[] = [
 
 export const processSteps: ProcessStep[] = [
   {
-    id: "01",
-    number: "01",
+    id: "conversamos",
+    icon: "forum",
     title: "Conversamos sobre tu proyecto",
     description:
       "Entendemos tu negocio, tus procesos y lo que necesitas resolver antes de proponer una solución.",
   },
   {
-    id: "02",
-    number: "02",
+    id: "propuesta",
+    icon: "design_services",
     title: "Propuesta y diseño",
     description:
       "Definimos alcance, tiempos y te presentamos una propuesta clara antes de comenzar a desarrollar.",
   },
   {
-    id: "03",
-    number: "03",
+    id: "desarrollo",
+    icon: "code",
     title: "Desarrollo",
     description:
       "Construimos tu sistema con entregas parciales para que veas el avance real del proyecto.",
   },
   {
-    id: "04",
-    number: "04",
+    id: "entrega",
+    icon: "rocket_launch",
     title: "Entrega y soporte",
     description:
       "Ponemos tu sistema en producción y te acompañamos con soporte y mejoras continuas.",
