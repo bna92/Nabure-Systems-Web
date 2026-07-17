@@ -3,13 +3,6 @@ import Button from "@/components/ui/Button";
 import Icon from "@/components/ui/Icon";
 import HeroAnimation from "@/components/sections/HeroAnimation";
 
-const serviceIcons: { icon: string; label: string }[] = [
-  { icon: "code", label: "Sistemas a la medida" },
-  { icon: "language", label: "Sitios web" },
-  { icon: "point_of_sale", label: "Puntos de venta" },
-  { icon: "chat", label: "WhatsApp" },
-];
-
 export default function Hero() {
   return (
     <section className="relative z-10 flex w-full flex-col items-center justify-center pb-16 pt-4 md:pb-20">

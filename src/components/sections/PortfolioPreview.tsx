@@ -3,46 +3,7 @@ import { Link } from "react-router-dom";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
 import Icon from "@/components/ui/Icon";
-import {
-  CustomSoftwareIllustration,
-  WebsiteIllustration,
-  PosIllustration,
-  WhatsappIllustration,
-  AdminSystemIllustration,
-} from "@/components/illustrations";
-
-const slides = [
-  {
-    id: "sistemas",
-    title: "Sistemas a la medida",
-    description: "Software hecho a la medida del proceso de cada negocio.",
-    Illustration: CustomSoftwareIllustration,
-  },
-  {
-    id: "web",
-    title: "Sitios web",
-    description: "Sitios rápidos y responsivos para cualquier giro.",
-    Illustration: WebsiteIllustration,
-  },
-  {
-    id: "pos",
-    title: "Puntos de venta",
-    description: "Control de ventas e inventario en un solo lugar.",
-    Illustration: PosIllustration,
-  },
-  {
-    id: "whatsapp",
-    title: "Automatización de WhatsApp",
-    description: "Atención y seguimiento automatizado a clientes.",
-    Illustration: WhatsappIllustration,
-  },
-  {
-    id: "admin",
-    title: "Sistemas administrativos",
-    description: "Plataformas internas para operar tu negocio.",
-    Illustration: AdminSystemIllustration,
-  },
-];
+import { portfolioProjects } from "@/data/portfolio";
 
 export default function PortfolioPreview() {
   const scrollerRef = useRef<HTMLDivElement>(null);
@@ -58,7 +19,7 @@ export default function PortfolioPreview() {
           align="left"
           eyebrow="Portafolio"
           title="Proyectos"
-          description="Un vistazo a las categorías de sistemas que desarrollamos. Conoce el detalle de cada proyecto en nuestro portafolio."
+          description="Un vistazo a los sistemas y sitios que hemos desarrollado. Conoce el detalle de cada proyecto en nuestro portafolio."
         />
         <div className="hidden shrink-0 gap-2 sm:flex">
           <button
@@ -84,22 +45,35 @@ export default function PortfolioPreview() {
         ref={scrollerRef}
         className="-mx-1 flex snap-x snap-mandatory gap-md overflow-x-auto scroll-smooth px-1 pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
-        {slides.map((slide) => (
+        {portfolioProjects.map((project) => (
           <Link
-            key={slide.id}
+            key={project.id}
             to="/portafolio"
             className="w-[260px] shrink-0 snap-start sm:w-[300px]"
           >
             <Card hover>
               <div className="flex h-full flex-col gap-4 p-4">
-                <div className="relative h-36 overflow-hidden rounded-2xl bg-surface-container-low">
-                  <slide.Illustration className="h-full w-full scale-125" />
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-surface-container-low">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="h-full w-full object-cover object-top"
+                    />
+                  ) : (
+                    <div className="flex h-full flex-col items-center justify-center gap-1 text-on-surface-variant">
+                      <Icon name="hourglass_top" className="text-2xl" />
+                      <span className="text-label-md font-semibold uppercase tracking-widest">
+                        Próximamente
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <div>
-                  <h3 className="text-title-lg text-on-surface">{slide.title}</h3>
-                  <p className="mt-1 text-body-sm text-on-surface-variant">
-                    {slide.description}
-                  </p>
+                  <span className="text-label-md font-bold uppercase tracking-wider text-on-surface-variant">
+                    {project.category}
+                  </span>
+                  <h3 className="text-title-lg text-on-surface">{project.title}</h3>
                 </div>
               </div>
             </Card>

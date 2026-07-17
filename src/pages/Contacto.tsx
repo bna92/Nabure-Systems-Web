@@ -28,17 +28,11 @@ export default function Contacto() {
         {/* Columna izquierda: contenido y detalles */}
         <div className="flex flex-col gap-lg lg:col-span-5">
           <div className="space-y-sm">
-            <span className="text-label-md font-bold uppercase tracking-widest text-on-surface-variant">
-              Hablemos de su proyecto
-            </span>
+
             <h1 className="text-display-lg text-on-surface">
-              Soluciones tecnológicas a medida para su empresa.
+              Hablemos de tu proyecto
             </h1>
-            <p className="max-w-[28rem] text-body-lg text-on-surface-variant">
-              En Nabure Systems transformamos ideas de negocio en sistemas
-              reales y escalables. Cuéntanos qué necesitas y te contactamos
-              para platicarlo.
-            </p>
+
           </div>
 
           <Card innerBg="bg-surface-container-low">
@@ -50,7 +44,7 @@ export default function Contacto() {
                 <div>
                   <p className="text-title-lg text-on-surface">Correo electrónico</p>
                   <p className="text-body-md text-on-surface-variant">
-                    bryanamezcua@gmail.com
+                    bnavarrete@otimexico.com
                   </p>
                 </div>
               </div>
@@ -75,7 +69,7 @@ export default function Contacto() {
                 <div>
                   <p className="text-title-lg text-on-surface">Horario de atención</p>
                   <p className="text-body-md text-on-surface-variant">
-                    Lunes a viernes: 09:00 - 18:00
+                    Lunes a domingo: 09:00 - 18:00
                   </p>
                 </div>
               </div>

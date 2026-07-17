@@ -5,6 +5,8 @@ import Home from "@/pages/Home";
 import Servicios from "@/pages/Servicios";
 import Portafolio from "@/pages/Portafolio";
 import Contacto from "@/pages/Contacto";
+import AvisoPrivacidad from "@/pages/AvisoPrivacidad";
+import TerminosServicio from "@/pages/TerminosServicio";
 import NotFound from "@/pages/NotFound";
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/portafolio" element={<Portafolio />} />
         <Route path="/contacto" element={<Contacto />} />
+        <Route path="/aviso-privacidad" element={<AvisoPrivacidad />} />
+        <Route path="/terminos-servicio" element={<TerminosServicio />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
