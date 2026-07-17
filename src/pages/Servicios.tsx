@@ -74,8 +74,8 @@ export default function Servicios() {
 
                     <Button
                       as="link"
-                      to="/contacto"
-                      variant={tier.highlighted ? "primary" : "secondary"}
+                      to={`/contacto?mensaje=${encodeURIComponent(tier.contactMessage)}`}
+                      variant="primary"
                       className="w-full"
                     >
                       {tier.cta}

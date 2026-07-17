@@ -10,6 +10,7 @@ export interface PricingTier {
   cta: string;
   highlighted?: boolean;
   tintClass: string;
+  contactMessage: string;
 }
 
 export interface PricingGroup {
@@ -33,7 +34,7 @@ export const pricingGroups: PricingGroup[] = [
         id: "pos-basico",
         name: "Básico",
         price: "$499",
-        billing: "MXN / mes (ejemplo)",
+        billing: "MXN / mes ",
         badgeTone: "green",
         description: "Para un negocio con un solo punto de venta.",
         features: [
@@ -43,14 +44,16 @@ export const pricingGroups: PricingGroup[] = [
           "Corte de caja diario",
           "Soporte por correo",
         ],
-        cta: "Empezar",
+        cta: "Elegir Básico",
         tintClass: "bg-blue-800/2",
+        contactMessage:
+          "Buen día, Nabure Systems. Me gustaría solicitar información sobre el plan Básico de punto de venta.",
       },
       {
         id: "pos-profesional",
         name: "Profesional",
         price: "$1,699",
-        billing: "MXN / mes (ejemplo)",
+        billing: "MXN / mes ",
         badgeTone: "blue",
         description: "Para negocios con varias sucursales o cajas.",
         features: [
@@ -63,12 +66,14 @@ export const pricingGroups: PricingGroup[] = [
         cta: "Elegir Profesional",
         highlighted: true,
         tintClass: "bg-red-800/2",
+        contactMessage:
+          "Buen día, Nabure Systems. Me gustaría solicitar información sobre el plan Profesional de punto de venta.",
       },
       {
         id: "pos-empresarial",
         name: "Empresarial",
         price: "Personalizado",
-        billing: "Cotización a la medida",
+        billing: "Cotización personalizada",
         badgeTone: "amber",
         description: "Para cadenas con necesidades específicas.",
         features: [
@@ -77,8 +82,10 @@ export const pricingGroups: PricingGroup[] = [
           "Dashboard multi-sucursal",
           "Soporte dedicado",
         ],
-        cta: "Hablar con ventas",
+        cta: "Elegir Empresarial",
         tintClass: "bg-green-800/2",
+        contactMessage:
+          "Buen día, Nabure Systems. Me interesa el plan Empresarial de punto de venta; me gustaría platicar sobre las necesidades específicas de mi negocio.",
       },
     ],
   },
@@ -105,6 +112,8 @@ export const pricingGroups: PricingGroup[] = [
         cta: "Empezar mi automatización",
         highlighted: true,
         tintClass: "bg-green-800/4",
+        contactMessage:
+          "Buen día, Nabure Systems. Me gustaría solicitar información sobre la automatización de WhatsApp para mi negocio.",
       },
     ],
   },
@@ -130,6 +139,8 @@ export const pricingGroups: PricingGroup[] = [
         ],
         cta: "Cotizar landing page",
         tintClass: "bg-pink-900/4",
+        contactMessage:
+          "Buen día, Nabure Systems. Me gustaría solicitar información sobre el servicio de Landing Page.",
       },
       {
         id: "sitio-completo",
@@ -147,6 +158,8 @@ export const pricingGroups: PricingGroup[] = [
         cta: "Cotizar sitio completo",
         highlighted: true,
         tintClass: "bg-orange-800/4",
+        contactMessage:
+          "Buen día, Nabure Systems. Me gustaría solicitar información sobre el servicio de Sitio Web Completo.",
       },
     ],
   },
@@ -174,6 +187,8 @@ export const pricingGroups: PricingGroup[] = [
         ],
         cta: "Cotizar mi sistema",
         tintClass: "bg-red-800/4",
+        contactMessage:
+          "Buen día, Nabure Systems. Me gustaría solicitar información sobre un Sistema Empresarial a la medida.",
       },
     ],
   },

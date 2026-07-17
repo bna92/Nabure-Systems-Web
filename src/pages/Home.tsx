@@ -2,7 +2,6 @@ import Panel from "@/components/ui/Panel";
 import Hero from "@/components/sections/Hero";
 import Highlights from "@/components/sections/Highlights";
 import Services from "@/components/sections/Services";
-import PortfolioPreview from "@/components/sections/PortfolioPreview";
 import HowWeHelp from "@/components/sections/HowWeHelp";
 import About from "@/components/sections/About";
 import Process from "@/components/sections/Process";
@@ -17,9 +16,6 @@ export default function Home() {
       </Panel>
       <Panel>
         <Services />
-      </Panel>
-      <Panel>
-        <PortfolioPreview />
       </Panel>
       <Panel>
         <HowWeHelp />

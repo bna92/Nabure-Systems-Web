@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { useSearchParams } from "react-router-dom";
 import { SiWhatsapp } from "react-icons/si";
 import Icon from "@/components/ui/Icon";
 import Card from "@/components/ui/Card";
@@ -21,6 +22,8 @@ type SubmitStatus = "idle" | "sending" | "success" | "error";
 
 export default function Contacto() {
   const [status, setStatus] = useState<SubmitStatus>("idle");
+  const [searchParams] = useSearchParams();
+  const prefilledMessage = searchParams.get("mensaje") ?? "";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -202,6 +205,7 @@ export default function Contacto() {
                   name="message"
                   required
                   rows={4}
+                  defaultValue={prefilledMessage}
                   placeholder="Describe brevemente lo que necesitas resolver..."
                   className="resize-none rounded-xl border border-outline-variant p-sm outline-none transition-all focus:border-on-surface focus:ring-2 focus:ring-on-surface/10"
                 />

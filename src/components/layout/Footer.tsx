@@ -14,16 +14,16 @@ export default function Footer() {
 
   return (
     <footer className="mt-xl w-full border-t border-on-primary-container/20 bg-primary-container">
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-lg px-md py-sm md:grid-cols-3 md:px-xl">
-        <div className="space-y-md">
+      <div className="mx-auto grid max-w-[1280px] grid-cols-1 gap-lg px-md py-sm text-center md:grid-cols-3 md:px-xl md:text-left">
+        <div className="flex flex-col items-center space-y-md md:items-start">
           <img src={logoFull} alt="Nabure Systems" className="w-[180px] md:w-[220px]" />
         </div>
 
-        <div className="space-y-sm">
+        <div className="flex flex-col items-center space-y-sm md:items-start">
           <p className="text-label-md font-bold uppercase tracking-wider text-on-primary-fixed">
             Legal
           </p>
-          <nav className="flex flex-col gap-base">
+          <nav className="flex flex-col items-center gap-base md:items-start">
             {legalLinks.map((link) => (
               <Link
                 key={link.label}
@@ -36,8 +36,8 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="space-y-sm">
-          <div className="flex items-center">
+        <div className="flex flex-col items-center space-y-sm md:items-start">
+          <div className="flex items-center justify-center md:justify-start">
             <p className="text-label-md font-bold uppercase tracking-wider text-on-primary-fixed">
               Contacto directo
             </p>
@@ -54,8 +54,6 @@ export default function Footer() {
 
           <p className="text-body-sm text-on-primary-container">{CONTACT_EMAIL}</p>
         </div>
-
-
       </div>
 
       <Container className="flex flex-col items-center justify-between gap-sm border-t border-on-primary-container/10 py-sm md:flex-row">

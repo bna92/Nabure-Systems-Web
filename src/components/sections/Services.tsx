@@ -8,6 +8,7 @@ import { services } from "@/data/services";
 const badges: Record<string, string> = {
   "sitios-web": "Más solicitado",
   "puntos-de-venta": "Disponible como plan",
+  "automatizacion-whatsapp": "Disponible como plan",
 };
 
 export default function Services() {
@@ -68,7 +69,7 @@ export default function Services() {
       </div>
 
       <Button as="link" to="/servicios" variant="secondary" className="self-center">
-        Ver todos los servicios
+        Ver precios
         <Icon name="arrow_forward" className="ml-2" />
       </Button>
     </div>
