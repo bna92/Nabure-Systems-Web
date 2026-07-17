@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import { SiWhatsapp } from "react-icons/si";
 import Container from "@/components/ui/Container";
 import logoFull from "@/assets/brand/Nabure_Systems_Logo_Transparente_2.png";
+import { WHATSAPP_NUMBER, CONTACT_EMAIL } from "@/data/site";
 
 const legalLinks = [
   { label: "Aviso de privacidad", to: "/aviso-privacidad" },
   { label: "Términos de servicio", to: "/terminos-servicio" },
 ];
-
-const WHATSAPP_NUMBER = "526671505736";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -53,9 +52,7 @@ export default function Footer() {
             </a>
           </div>
 
-          <p className="text-body-sm text-on-primary-container">
-            bnavarrete@otimexico.com
-          </p>
+          <p className="text-body-sm text-on-primary-container">{CONTACT_EMAIL}</p>
         </div>
 
 

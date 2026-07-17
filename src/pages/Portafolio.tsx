@@ -41,8 +41,31 @@ export default function Portafolio() {
                   <span className="w-fit rounded-full bg-surface-container-low px-sm py-1 text-label-md font-bold uppercase tracking-wider text-on-surface-variant">
                     {project.category}
                   </span>
-                  <h3 className="text-title-lg text-on-surface">{project.title}</h3>
-                  <p className="text-body-sm text-on-surface-variant">{project.description}</p>
+                  <h3 className="text-title-lg text-on-surface">
+                    {project.title}
+                  </h3>
+                  <p className="text-body-sm text-on-surface-variant">
+                    {project.description}
+                  </p>
+                  {project.demoCredentials && (
+                    <div className="flex flex-col gap-1 rounded-xl bg-surface-container-low px-sm py-xs text-body-sm text-on-surface-variant">
+                      <span className="text-label-md font-semibold uppercase tracking-wider text-outline">
+                        Acceso de prueba
+                      </span>
+                      <span>
+                        Usuario:{" "}
+                        <span className="font-semibold text-on-surface">
+                          {project.demoCredentials.user}
+                        </span>
+                      </span>
+                      <span>
+                        Contraseña:{" "}
+                        <span className="font-semibold text-on-surface">
+                          {project.demoCredentials.password}
+                        </span>
+                      </span>
+                    </div>
+                  )}
 
                   {project.url && (
                     <a
@@ -67,8 +90,8 @@ export default function Portafolio() {
           ¿Quieres ver tu proyecto aquí?
         </h2>
         <p className="max-w-[28rem] text-body-md text-on-surface-variant">
-          Cuéntanos qué necesitas y te ayudamos a construir la solución
-          adecuada para tu negocio.
+          Cuéntanos qué necesitas y te ayudamos a construir la solución adecuada
+          para tu negocio.
         </p>
         <Button as="link" to="/contacto">
           Cotiza tu proyecto

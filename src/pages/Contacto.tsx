@@ -1,8 +1,10 @@
 import { useState, type FormEvent } from "react";
+import { SiWhatsapp } from "react-icons/si";
 import Icon from "@/components/ui/Icon";
 import Card from "@/components/ui/Card";
 import Panel from "@/components/ui/Panel";
 import Button from "@/components/ui/Button";
+import { WHATSAPP_NUMBER, CONTACT_EMAIL } from "@/data/site";
 
 const projectTypes = [
   "Software a medida",
@@ -13,13 +15,41 @@ const projectTypes = [
   "Otro",
 ];
 
-export default function Contacto() {
-  const [submitted, setSubmitted] = useState(false);
+const WHATSAPP_MESSAGE = "Hola, me gustaría cotizar un proyecto con Nabure Systems.";
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+type SubmitStatus = "idle" | "sending" | "success" | "error";
+
+export default function Contacto() {
+  const [status, setStatus] = useState<SubmitStatus>("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    // TODO: conectar a un servicio de envío de correo o backend real.
-    setSubmitted(true);
+    const form = event.currentTarget;
+    setStatus("sending");
+
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${CONTACT_EMAIL}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...data,
+          _subject: "Nueva solicitud de cotización — Nabure Systems",
+          _template: "table",
+        }),
+      });
+
+      if (!response.ok) throw new Error("Request failed");
+
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -35,6 +65,16 @@ export default function Contacto() {
 
           </div>
 
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`}
+            target="_blank"
+            rel="noreferrer"
+            className="flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-lg py-sm text-body-md font-semibold text-white transition-opacity hover:opacity-90"
+          >
+            <SiWhatsapp size={20} />
+            Escríbenos por WhatsApp
+          </a>
+
           <Card innerBg="bg-surface-container-low">
             <div className="space-y-md p-md">
               <div className="flex items-start gap-sm">
@@ -43,9 +83,7 @@ export default function Contacto() {
                 </div>
                 <div>
                   <p className="text-title-lg text-on-surface">Correo electrónico</p>
-                  <p className="text-body-md text-on-surface-variant">
-                    bnavarrete@otimexico.com
-                  </p>
+                  <p className="text-body-md text-on-surface-variant">{CONTACT_EMAIL}</p>
                 </div>
               </div>
 
@@ -140,7 +178,7 @@ export default function Contacto() {
                     htmlFor="company"
                     className="text-label-md uppercase text-on-surface-variant"
                   >
-                    Empresa / organización
+                    Empresa / organización <span className="normal-case text-outline">(Opcional)</span>
                   </label>
                   <input
                     id="company"
@@ -181,16 +219,23 @@ export default function Contacto() {
                 </label>
               </div>
 
-              <Button type="submit" className="w-full">
+              <Button type="submit" className="w-full" disabled={status === "sending"}>
                 <span className="inline-flex items-center gap-2">
-                  Enviar solicitud
+                  {status === "sending" ? "Enviando..." : "Enviar solicitud"}
                   <Icon name="arrow_forward" className="text-lg" />
                 </span>
               </Button>
 
-              {submitted && (
+              {status === "success" && (
                 <p className="text-body-sm font-semibold text-on-surface">
                   ¡Gracias! Te contactaremos pronto.
+                </p>
+              )}
+
+              {status === "error" && (
+                <p className="text-body-sm font-semibold text-red-600">
+                  Hubo un problema al enviar tu solicitud. Intenta de nuevo o
+                  escríbenos por WhatsApp.
                 </p>
               )}
             </form>

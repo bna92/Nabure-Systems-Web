@@ -1,5 +1,6 @@
 import Panel from "@/components/ui/Panel";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { CONTACT_EMAIL, WHATSAPP_NUMBER } from "@/data/site";
 
 export default function AvisoPrivacidad() {
   return (
@@ -12,21 +13,13 @@ export default function AvisoPrivacidad() {
           description="Última actualización: julio de 2026."
         />
 
-        <div className="rounded-2xl border border-amber-200 bg-amber-50 px-md py-sm text-body-sm text-amber-800">
-          Este aviso es una plantilla general de referencia y no sustituye
-          asesoría legal. Antes de publicarlo de forma definitiva, te
-          recomendamos que lo revise un abogado para asegurar que cumple con
-          la Ley Federal de Protección de Datos Personales en Posesión de los
-          Particulares.
-        </div>
-
         <div className="flex flex-col gap-lg text-body-md leading-relaxed text-on-surface-variant">
           <section className="flex flex-col gap-sm">
             <h2 className="text-title-lg text-on-surface">1. Responsable de tus datos</h2>
             <p>
               Nabure Systems ("nosotros"), con contacto en{" "}
-              <a href="mailto:bryanamezcua@gmail.com" className="font-semibold text-on-surface hover:underline">
-                bryanamezcua@gmail.com
+              <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-on-surface hover:underline">
+                {CONTACT_EMAIL}
               </a>
               , es responsable del tratamiento de los datos personales que nos
               proporciones a través de este sitio web.
@@ -95,8 +88,8 @@ export default function AvisoPrivacidad() {
               Tienes derecho a Acceder, Rectificar, Cancelar u Oponerte al uso
               de tus datos personales (derechos ARCO). Para ejercerlos,
               escríbenos a{" "}
-              <a href="mailto:bryanamezcua@gmail.com" className="font-semibold text-on-surface hover:underline">
-                bryanamezcua@gmail.com
+              <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-on-surface hover:underline">
+                {CONTACT_EMAIL}
               </a>{" "}
               indicando tu nombre y la solicitud específica. Responderemos en
               un plazo razonable.
@@ -115,10 +108,19 @@ export default function AvisoPrivacidad() {
             <h2 className="text-title-lg text-on-surface">7. Contacto</h2>
             <p>
               Si tienes dudas sobre este aviso de privacidad, contáctanos en{" "}
-              <a href="mailto:bryanamezcua@gmail.com" className="font-semibold text-on-surface hover:underline">
-                bryanamezcua@gmail.com
+              <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-on-surface hover:underline">
+                {CONTACT_EMAIL}
               </a>{" "}
-              o por WhatsApp al +52 667 150 5736.
+              o por{" "}
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                target="_blank"
+                rel="noreferrer"
+                className="font-semibold text-on-surface hover:underline"
+              >
+                WhatsApp
+              </a>
+              .
             </p>
           </section>
         </div>

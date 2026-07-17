@@ -10,6 +10,7 @@ export interface PortfolioProject {
   url?: string;
   image?: string;
   comingSoon?: boolean;
+  demoCredentials?: { user: string; password: string };
 }
 
 export const portfolioProjects: PortfolioProject[] = [
@@ -21,6 +22,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "Sistema de punto de venta para abarrotes y tiendas: ventas, control de inventario, clientes, proveedores y reportes en tiempo real.",
     url: "https://pos-system-topaz-xi.vercel.app",
     image: posSystemImg,
+    demoCredentials: { user: "admin@pos.local", password: "admin123" },
   },
   {
     id: "cope-system",
