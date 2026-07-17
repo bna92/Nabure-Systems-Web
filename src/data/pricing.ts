@@ -32,7 +32,7 @@ export const pricingGroups: PricingGroup[] = [
       {
         id: "pos-basico",
         name: "Básico",
-        price: "$999",
+        price: "$499",
         billing: "MXN / mes (ejemplo)",
         badgeTone: "green",
         description: "Para un negocio con un solo punto de venta.",
@@ -49,9 +49,8 @@ export const pricingGroups: PricingGroup[] = [
       {
         id: "pos-profesional",
         name: "Profesional",
-        price: "$1,899",
+        price: "$1,699",
         billing: "MXN / mes (ejemplo)",
-        badge: "Más popular",
         badgeTone: "blue",
         description: "Para negocios con varias sucursales o cajas.",
         features: [
@@ -93,10 +92,10 @@ export const pricingGroups: PricingGroup[] = [
       {
         id: "whatsapp-suscripcion",
         name: "Suscripción WhatsApp",
-        price: "$1,499",
-        billing: "MXN / mes (ejemplo)",
+        price: "$199",
+        billing: "MXN / mes",
         badgeTone: "green",
-        description: "Un solo número, un bot, cero ventas perdidas por falta de respuesta.",
+        description: "Un solo número, un bot, cero ventas perdidas por falta de respuesta desde:",
         features: [
           "Respuestas y flujos de conversación a la medida",
           "Integración con tu catálogo o sistema interno",
