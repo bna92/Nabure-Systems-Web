@@ -40,11 +40,4 @@ export const portfolioProjects: PortfolioProject[] = [
     url: "https://www.kambarbersalon.com/",
     image: kamBarberImg,
   },
-  {
-    id: "linshop",
-    title: "LinShop",
-    category: "Tienda en línea",
-    description: "Tienda en línea a la medida. Muy pronto disponible.",
-    comingSoon: true,
-  },
 ];
