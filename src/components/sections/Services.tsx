@@ -3,6 +3,7 @@ import Icon from "@/components/ui/Icon";
 import Card from "@/components/ui/Card";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
+import { useInView } from "@/hooks/useInView";
 import { services } from "@/data/services";
 
 const badges: Record<string, string> = {
@@ -10,6 +11,27 @@ const badges: Record<string, string> = {
   "puntos-de-venta": "Disponible como plan",
   "automatizacion-whatsapp": "Disponible como plan",
 };
+
+function ServiceVideo({ serviceId }: { serviceId: string }) {
+  const { ref, isInView } = useInView<HTMLDivElement>();
+
+  return (
+    <div ref={ref} className="relative h-40 overflow-hidden rounded-2xl bg-surface-container-low">
+      {isInView && (
+        <video
+          src={`/videos/services/${serviceId}.mp4`}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+          className="h-full w-full object-cover object-top"
+        />
+      )}
+    </div>
+  );
+}
 
 export default function Services() {
   const featured = services.slice(0, 4);
@@ -32,18 +54,7 @@ export default function Services() {
                 </span>
               )}
               <div className="flex h-full flex-col gap-sm p-lg">
-                <div className="relative h-40 overflow-hidden rounded-2xl bg-surface-container-low">
-                  <video
-                    src={`/videos/services/${service.id}.mp4`}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="auto"
-                    aria-hidden="true"
-                    className="h-full w-full object-cover object-top"
-                  />
-                </div>
+                <ServiceVideo serviceId={service.id} />
                 <h3 className="flex items-center justify-between gap-2 text-title-lg text-on-surface">
                   {service.title}
                   <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-surface-container-low text-on-surface">

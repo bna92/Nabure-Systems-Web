@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { SiWhatsapp } from "react-icons/si";
 import Container from "@/components/ui/Container";
-import logoFull from "@/assets/brand/Nabure_Systems_Logo_Transparente_2.png";
+import logoFull from "@/assets/brand/logo-full.webp";
 import { WHATSAPP_NUMBER, CONTACT_EMAIL } from "@/data/site";
 
 const legalLinks = [
