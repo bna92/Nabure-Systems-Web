@@ -10,7 +10,14 @@ export default function Header() {
   return (
     <header className="sticky top-3 z-50 mx-auto w-[calc(100%-1.5rem)] max-w-[1350px] sm:top-4 sm:w-[calc(100%-3rem)]">
       <div className="flex h-20 items-center justify-between rounded-full border border-white/60 bg-white/80 px-md shadow-[0_8px_30px_-10px_rgba(15,111,255,0.25)] backdrop-blur-xl md:grid md:grid-cols-3 md:px-xl">
-        <Link to="/" className="flex items-center gap-3">
+        <Link
+          to="/"
+          onClick={() => {
+            setOpen(false);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="flex items-center gap-3"
+        >
           <img
             src={logoMark}
             alt="Nabure Systems"
