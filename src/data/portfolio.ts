@@ -1,6 +1,7 @@
 import posSystemImg from "@/assets/portfolio/pos-system.png";
 import copeSystemImg from "@/assets/portfolio/cope-system.png";
 import kamBarberImg from "@/assets/portfolio/kam-barber.png";
+import amexmobImg from "@/assets/portfolio/amexmob.jpg";
 
 export interface PortfolioProject {
   id: string;
@@ -36,10 +37,19 @@ export const portfolioProjects: PortfolioProject[] = [
   {
     id: "kam-barber-salon",
     title: "KAM Barber Salon",
-    category: "Sitio web",
+    category: "Sitio web con catálogo de productos",
     description:
       "Sitio web para una barbería unisex: catálogo de servicios, galería, videos y reservación de citas.",
     url: "https://www.kambarbersalon.com/",
     image: kamBarberImg,
+  },
+  {
+    id: "amexmob",
+    title: "Amexmob",
+    category: "Landing page",
+    description:
+      "Landing page para Amexmob, inmobiliaria en Culiacán: presentación de propiedades y contacto directo para agendar una visita.",
+    url: "https://inmobiliaria-inky-seven.vercel.app/",
+    image: amexmobImg,
   },
 ];

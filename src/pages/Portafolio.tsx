@@ -27,11 +27,18 @@ export default function Portafolio() {
                       alt={project.title}
                       className="h-full w-full object-cover object-top"
                     />
-                  ) : (
+                  ) : project.comingSoon ? (
                     <div className="flex h-full flex-col items-center justify-center gap-2 text-on-surface-variant">
                       <Icon name="hourglass_top" className="text-3xl" />
                       <span className="text-label-md font-semibold uppercase tracking-widest">
                         Próximamente
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="flex h-full flex-col items-center justify-center gap-2 text-on-surface-variant">
+                      <Icon name="language" className="text-3xl" />
+                      <span className="text-label-md font-semibold uppercase tracking-widest">
+                        Ver sitio en vivo
                       </span>
                     </div>
                   )}
