@@ -6,6 +6,7 @@ export default function AvisoPrivacidad() {
   return (
     <Panel>
       <div className="mx-auto flex max-w-3xl flex-col gap-xl">
+        <h1 className="sr-only">Aviso de privacidad de Nabure Systems</h1>
         <SectionHeading
           align="left"
           eyebrow="Legal"

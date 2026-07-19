@@ -6,6 +6,7 @@ export default function TerminosServicio() {
   return (
     <Panel>
       <div className="mx-auto flex max-w-3xl flex-col gap-xl">
+        <h1 className="sr-only">Términos de servicio de Nabure Systems</h1>
         <SectionHeading
           align="left"
           eyebrow="Legal"

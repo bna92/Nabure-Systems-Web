@@ -25,8 +25,7 @@ export default function Servicios() {
 
   return (
     <Panel className="flex flex-col gap-xl">
- 
-
+      <h1 className="sr-only">Precios y planes de Nabure Systems</h1>
 
       {pricingGroups.map((group) => (
         <div

@@ -9,6 +9,7 @@ import { portfolioProjects } from "@/data/portfolio";
 export default function Portafolio() {
   return (
     <Panel className="flex flex-col gap-xl">
+      <h1 className="sr-only">Portafolio de proyectos de Nabure Systems</h1>
       <SectionHeading
         eyebrow="Portafolio"
         title="Proyectos que hemos desarrollado"
