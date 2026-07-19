@@ -154,6 +154,8 @@ export const pricingGroups: PricingGroup[] = [
           "Panel de administración de contenido",
           "SEO y rendimiento optimizados",
           "Integración con WhatsApp, redes sociales o CRM",
+          "Tiendas online",
+          "Catalogo de productos, carrito de compras, integración de mercado pago",
         ],
         cta: "Cotizar sitio completo",
         highlighted: true,
@@ -166,9 +168,9 @@ export const pricingGroups: PricingGroup[] = [
   {
     id: "sistemas-empresariales",
     eyebrow: "Sistemas empresariales",
-    title: "Software para operar y capacitar a tu equipo",
+    title: "Software para dirigir y capacitar a tu equipo",
     description:
-      "Plataformas internas hechas para tus procesos. Por ejemplo: un sistema de administración y capacitación de empleados.",
+      "Plataformas internas construidas alrededor de tus procesos: control de personal, seguimiento de desempeño y capacitación, todo en un solo sistema.",
     tiers: [
       {
         id: "sistema-empresarial",

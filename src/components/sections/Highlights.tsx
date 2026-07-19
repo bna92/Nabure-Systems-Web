@@ -65,7 +65,7 @@ export default function Highlights() {
               </h4>
               <p className="pr-2 text-body-sm font-medium leading-relaxed text-on-surface-variant">
                 Que cualquier negocio, sin importar su tamaño, tenga acceso a
-                software hecho a su medida.
+                software adaptado a sus necesidades .
               </p>
             </div>
           </div>

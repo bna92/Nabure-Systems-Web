@@ -14,7 +14,7 @@ const rows = [
     title: "Software que se adapta a ti, no al revés",
     description:
       "Nada de forzar tu operación a encajar en una plantilla genérica. Construimos el sistema alrededor de cómo ya trabajas.",
-    link: "/servicios",
+    link: "/servicios#sistemas-empresariales",
     Illustration: CustomSoftwareIllustration,
   },
   {
@@ -22,7 +22,7 @@ const rows = [
     title: "Un sitio web que representa tu marca",
     description:
       "Rápido, responsivo y fácil de administrar, sin importar si vendes ropa, servicios profesionales o comida.",
-    link: "/servicios",
+    link: "/servicios#sitios-web",
     Illustration: WebsiteIllustration,
   },
   {
@@ -30,7 +30,7 @@ const rows = [
     title: "Vende y controla tu inventario en un solo lugar",
     description:
       "Un punto de venta pensado para tu negocio, con reportes claros y la opción de contratarlo como suscripción mensual.",
-    link: "/servicios#precios",
+    link: "/servicios#puntos-de-venta",
     Illustration: PosIllustration,
   },
   {
@@ -38,7 +38,7 @@ const rows = [
     title: "Atiende a tus clientes sin estar pegado al celular",
     description:
       "Automatiza respuestas, seguimiento y notificaciones en WhatsApp, sin perder el toque humano cuando importa.",
-    link: "/servicios",
+    link: "/servicios#automatizacion-whatsapp",
     Illustration: WhatsappIllustration,
   },
 ];
