@@ -6,7 +6,7 @@ import HeroAnimation from "@/components/sections/HeroAnimation";
 export default function Hero() {
   return (
     <section className="relative z-10 flex w-full flex-col items-center justify-center pb-16 pt-4 md:pb-20">
-      <h1 className="sr-only">Nabure Systems — software a la medida de tu negocio</h1>
+      <h1 className="sr-only">Nabure Systems — software que se adapta a negocio</h1>
 
       <Link
         to="/servicios"
@@ -32,8 +32,8 @@ export default function Hero() {
           Conoce más
         </a>
         <p className="text-body-sm font-medium leading-relaxed text-on-surface-variant">
-          Nabure Systems es el estudio que convierte procesos reales de tu
-          negocio en software a la medida: sitios, puntos de venta y
+          Nabure Systems estudia procesos reales de tu
+          negocio y los convierte en software: sitios, puntos de venta y
           automatizaciones, sin plantillas genéricas.
         </p>
       </div>

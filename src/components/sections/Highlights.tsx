@@ -3,7 +3,7 @@ import Icon from "@/components/ui/Icon";
 import { CustomSoftwareIllustration } from "@/components/illustrations";
 
 const featureList = [
-  { icon: "tune", label: "Desarrollo a la medida" },
+  { icon: "tune", label: "Desarrollo pensado para tu negocio" },
   { icon: "support_agent", label: "Soporte continuo" },
   { icon: "bolt", label: "Entrega ágil" },
 ];

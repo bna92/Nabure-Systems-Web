@@ -18,7 +18,11 @@ import {
 } from "react-icons/si";
 
 const points = [
-  "Soluciones diseñadas alrededor de tu proceso real de negocio",
+  "Tecnologías modernas: React, TypeScript, Node.js y más",
+  "Sitios rápidos, con buen rendimiento y SEO optimizado",
+  "Diseño responsivo: se ve bien en cualquier dispositivo",
+  "Entregas parciales para que veas avances reales, no solo al final",
+  "Integraciones con herramientas que ya usas: WhatsApp, correo, sistemas actuales",
   "Comunicación directa durante todo el desarrollo",
   "Código escalable, mantenible y documentado",
   "Soporte y mejoras después de la entrega",

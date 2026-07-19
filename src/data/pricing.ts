@@ -104,7 +104,7 @@ export const pricingGroups: PricingGroup[] = [
         badgeTone: "green",
         description: "Un solo número, un bot, cero ventas perdidas por falta de respuesta desde:",
         features: [
-          "Respuestas y flujos de conversación a la medida",
+          "Respuestas y flujos de conversación claros",
           "Integración con tu catálogo o sistema interno",
           "Notificaciones y recordatorios automáticos",
           "Ajustes y mejoras al flujo incluidos",
@@ -120,7 +120,7 @@ export const pricingGroups: PricingGroup[] = [
   {
     id: "sitios-web",
     eyebrow: "Sitios web",
-    title: "Un sitio a la medida de tu presupuesto",
+    title: "Un sitio ajustado a tu presupuesto",
     description:
       "Desde una landing page para validar una idea o promocionar un servicio, hasta un sitio completo con panel de administración propio.",
     tiers: [
@@ -150,7 +150,7 @@ export const pricingGroups: PricingGroup[] = [
         badgeTone: "blue",
         description: "Para negocios que necesitan varias secciones, catálogo o blog.",
         features: [
-          "Múltiples páginas y secciones a la medida",
+          "Múltiples páginas y secciones",
           "Panel de administración de contenido",
           "SEO y rendimiento optimizados",
           "Integración con WhatsApp, redes sociales o CRM",
@@ -168,7 +168,7 @@ export const pricingGroups: PricingGroup[] = [
     eyebrow: "Sistemas empresariales",
     title: "Software para operar y capacitar a tu equipo",
     description:
-      "Plataformas internas hechas a la medida de tus procesos. Por ejemplo: un sistema de administración y capacitación de empleados.",
+      "Plataformas internas hechas para tus procesos. Por ejemplo: un sistema de administración y capacitación de empleados.",
     tiers: [
       {
         id: "sistema-empresarial",
@@ -182,13 +182,13 @@ export const pricingGroups: PricingGroup[] = [
           "Gestión de empleados, roles y permisos",
           "Control de asistencia y desempeño",
           "Módulo de capacitación y cursos internos",
-          "Reportes y dashboards a la medida",
+          "Reportes y dashboards ",
           "Sistemas de facturación"
         ],
         cta: "Cotizar mi sistema",
         tintClass: "bg-red-800/4",
         contactMessage:
-          "Buen día, Nabure Systems. Me gustaría solicitar información sobre un Sistema Empresarial a la medida.",
+          "Buen día, Nabure Systems. Me gustaría solicitar información sobre un Sistema Empresarial .",
       },
     ],
   },

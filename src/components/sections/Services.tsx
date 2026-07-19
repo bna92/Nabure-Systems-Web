@@ -18,7 +18,7 @@ export default function Services() {
     <div className="flex flex-col gap-xl">
       <SectionHeading
         eyebrow="Servicios"
-        title="Soluciones a la medida para cada necesidad"
+        title="Soluciones para cada necesidad"
         description="Desde una idea hasta un sistema en producción: cubrimos todo el ciclo de desarrollo de tu proyecto."
       />
 

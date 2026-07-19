@@ -66,11 +66,11 @@ export const services: Service[] = [
     id: "otros-proyectos",
     title: "Y cualquier otro proyecto que imagines",
     description:
-      "Si tu idea no encaja en una caja, con gusto la analizamos. Nos especializamos en construir soluciones a la medida de cada necesidad.",
+      "Si tu idea no encaja en una caja, con gusto la analizamos. Nos especializamos en construir soluciones para cada necesidad.",
     icon: "widgets",
     features: [
       "Consultoría técnica inicial sin costo",
-      "Propuesta de solución a la medida",
+      "Propuesta de solución ",
       "Acompañamiento durante todo el proyecto",
     ],
   },
